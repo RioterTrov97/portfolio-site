@@ -6,24 +6,26 @@ import { useHistory } from 'react-router';
 function Footer({ theme }) {
 	const history = useHistory();
 	return (
-		<div className="footer">
-			<div className="footerLeft">
-				<div
-					className="footerLeftIcon"
-					onClick={() => history.push('/#contact')}>
-					<MailOutlineRoundedIcon className="mailIcon" />
+		<div className="footerContainer">
+			<div className="footer">
+				<div className="footerLeft">
+					<div
+						className="footerLeftIcon"
+						onClick={() => history.push('/#contact')}>
+						<MailOutlineRoundedIcon className="mailIcon" />
+					</div>
+					<div
+						className="footerLeftText"
+						onClick={() => history.push('/#contact')}>
+						<p>Contact me</p>
+					</div>
 				</div>
 				<div
-					className="footerLeftText"
-					onClick={() => history.push('/#contact')}>
-					<p>Contact me</p>
+					className={
+						theme ? 'footerRight' : 'footerRight footerBlackText'
+					}>
+					<p>SumanDesign2021®</p>
 				</div>
-			</div>
-			<div
-				className={
-					theme ? 'footerRight' : 'footerRight footerBlackText'
-				}>
-				<p>SumanDesign2021®</p>
 			</div>
 		</div>
 	);

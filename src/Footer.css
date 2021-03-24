@@ -1,8 +1,13 @@
+.footerContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .footer {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	max-width: 1400px;
+	max-width: 1600px;
 	display: flex;
 	justify-content: flex-start;
 	z-index: 20;
