@@ -16,6 +16,7 @@ function Contact({ theme }) {
 	const [isMessageActive, setIsMessageActive] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
 	const [isSent, setIsSent] = useState(false);
+	const [isError, setIsError] = useState(false);
 
 	const handleName = (text) => {
 		setName(text);
@@ -80,6 +81,7 @@ function Contact({ theme }) {
 		setIsLoading(true);
 
 		if (!name || !email || !subject || !message) {
+			setIsError(true);
 			toast.warn('🙏 Please add all the details!', {
 				position: 'bottom-right',
 				autoClose: 5000,
@@ -96,6 +98,7 @@ function Contact({ theme }) {
 		instance.post('/send', data).then((response) => {
 			setIsLoading(false);
 			setIsSent(true);
+			setIsError(false);
 			if (response.data.status === 'success') {
 				toast.info('🥰 Your message has been delivered!', {
 					position: 'bottom-right',
@@ -137,6 +140,15 @@ function Contact({ theme }) {
 		</div>
 	);
 
+	const dataMissing = (
+		<div className="messageSent errorMessage">
+			<p>Please fill all the details below. 🙏</p>
+			<button onClick={() => setIsError(false)}>
+				<CloseRoundedIcon />
+			</button>
+		</div>
+	);
+
 	return (
 		<section
 			id="contact"
@@ -162,6 +174,7 @@ function Contact({ theme }) {
 				<div className="contactBody">
 					<div className="submitLeft">
 						{isSent && confirmMessageSent}
+						{isError && dataMissing}
 						<div id="float-label">
 							<input
 								id="full-name"
