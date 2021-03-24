@@ -16,8 +16,8 @@ function Nav({ theme }) {
 
 		const options = {
 			root: null,
-			rootMargin: '-50px 0px 0px 0px',
-			threshold: 0.3,
+			rootMargin: '10px 0px 0px 0px',
+			threshold: 1.0,
 		};
 
 		const observer = new IntersectionObserver(function (entries) {
@@ -118,13 +118,13 @@ function Nav({ theme }) {
 						type="image/svg+xml"
 						data={diamondSvg}
 						className={theme ? 'navLogo' : 'navHide'}>
-						svg-animation
+						Diamond Animation
 					</object>
 					<object
 						type="image/svg+xml"
 						data={diamondDSvg}
 						className={theme ? 'navHide' : 'navLogo'}>
-						svg-animation
+						Diamond Animation
 					</object>
 				</div>
 
@@ -227,7 +227,12 @@ function Nav({ theme }) {
 							setToggleMenu((prevToggle) => !prevToggle)
 						}
 						className="navButton">
-						<MenuRoundedIcon className={theme ? "hamIcon" : "hamIcon darkHamIcon"} />
+						<MenuRoundedIcon
+							className={
+								theme ? 'hamIcon' : 'hamIcon darkHamIcon'
+							}
+							aria-label="ham-icon"
+						/>
 					</Button>
 				</div>
 			</div>

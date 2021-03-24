@@ -255,11 +255,11 @@
 .introDarkText > h5,
 .introDarkText > p,
 .introDarkText {
-	color: rgb(218, 218, 218);
+	color: rgb(240, 240, 240);
 }
 
 .introDarkTextBorder {
-	border: 2px solid rgb(157, 98, 253, 0.6);
+	border: 2px solid rgb(157, 98, 253, 0.8);
 }
 
 .introDarkBefore::before {

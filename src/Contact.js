@@ -82,44 +82,56 @@ function Contact({ theme }) {
 					<div className="submitLeft">
 						<div id="float-label">
 							<input
+								id="full-name"
 								type="text"
 								className={theme ? null : 'contactDarkInput'}
 								value={name}
 								onChange={(e) => handleName(e.target.value)}
 							/>
-							<label className={isNameActive ? 'Active' : ''}>
+							<label
+								htmlFor="full-name"
+								className={isNameActive ? 'Active' : ''}>
 								Full Name
 							</label>
 						</div>
 						<div id="float-label">
 							<input
-								type="text"
+								type="email"
+								id="email"
 								className={theme ? null : 'contactDarkText'}
 								value={email}
 								onChange={(e) => handleEmail(e.target.value)}
 							/>
-							<label className={isEmailActive ? 'Active' : ''}>
+							<label
+								htmlFor="email"
+								className={isEmailActive ? 'Active' : ''}>
 								E-mail
 							</label>
 						</div>
 						<div id="float-label">
 							<input
 								type="text"
+								id="subject"
 								value={subject}
 								onChange={(e) => handleSubject(e.target.value)}
 							/>
-							<label className={isSubjectActive ? 'Active' : ''}>
+							<label
+								htmlFor="subject"
+								className={isSubjectActive ? 'Active' : ''}>
 								Subject
 							</label>
 						</div>
 						<div id="float-label-textarea">
 							<textarea
 								type="text"
+								id="message"
 								className="contactMessage"
 								value={message}
 								onChange={(e) => handleMessage(e.target.value)}
 							/>
-							<label className={isMessageActive ? 'Active' : ''}>
+							<label
+								htmlFor="message"
+								className={isMessageActive ? 'Active' : ''}>
 								Message
 							</label>
 						</div>

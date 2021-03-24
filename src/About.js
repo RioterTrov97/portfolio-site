@@ -3,6 +3,8 @@ import { ReactComponent as GitHub } from './images/github.svg';
 import { ReactComponent as Linkedin } from './images/linkedin.svg';
 import { ReactComponent as Instagram } from './images/instagram.svg';
 import emoji from './images/robot.gif';
+import photoshop from './images/photoshop-logo.png';
+import reactLogo from './images/React-Logo.png';
 import './About.css';
 import Skill from './Skill';
 import { useHistory } from 'react-router';
@@ -110,7 +112,7 @@ const About = ({ theme }) => {
 							skillLink="https://www.javascript.com/"
 						/>
 						<Skill
-							skillImg="https://oneteamsolutions.in/blogoneteam/wp-content/uploads/2020/05/REACT-JS-KOCHI.png"
+							skillImg={reactLogo}
 							skillLink="https://reactjs.org/"
 						/>
 						<Skill
@@ -130,7 +132,7 @@ const About = ({ theme }) => {
 							skillLink="https://git-scm.com/"
 						/>
 						<Skill
-							skillImg="https://i.pinimg.com/originals/3a/95/ed/3a95ed4894f7e20a138d812e940adbbc.png"
+							skillImg={photoshop}
 							skillLink="https://www.adobe.com/au/products/photoshop.html"
 						/>
 					</div>

@@ -189,12 +189,9 @@
 	background: rgb(80, 79, 79);
 }
 
-.aboutDarkText {
-	color: rgb(218, 218, 218);
-}
-
+.aboutDarkText,
 .aboutDarkText > p {
-	color: rgb(218, 218, 218);
+	color: rgb(240, 240, 240);
 }
 
 .aboutDarkText > span {
@@ -206,14 +203,14 @@
 }
 
 .socialDarkSVG > svg {
-	fill: rgb(218, 218, 218) !important;
+	fill: rgb(240, 240, 240) !important;
 }
 
 .aboutDarkHeading {
-	color: rgb(167, 94, 226);
+	color: rgb(196, 95, 255);
 }
 
 .aboutDarkTextBorder {
-	border: 3px solid rgba(149, 87, 248, 0.6);
-	color: rgb(167, 94, 226);
+	border: 3px solid rgba(255, 255, 255, 0.8);
+	color: rgb(255, 255, 255);
 }
