@@ -278,6 +278,31 @@
 	}
 }
 
+@media only screen and (max-width: 500px) {
+	.submitRight {
+		width: 95%;
+		max-width: 250px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.submitLeft {
+		width: 90%;
+		max-width: 250px;
+	}
+
+	#float-label input {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	#float-label-textarea textarea {
+		width: 100%;
+		max-width: 300px;
+	}
+}
+
 .contactBlack {
 	background: rgb(80, 79, 79);
 }
