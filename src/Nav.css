@@ -66,7 +66,7 @@
 	z-index: 100;
 }
 
-.navLinkBox > ul > a {
+.navLinkBox > ul > li > a {
 	text-decoration: none;
 	color: rgb(31, 31, 31);
 	font-weight: 600;
@@ -76,6 +76,10 @@
 
 .navLinkBox > ul {
 	padding: 2.5em 0;
+}
+
+.navLinkBox > ul > li {
+	list-style: none;
 }
 
 .navLink:hover {
@@ -116,18 +120,22 @@
 	padding-bottom: 1.5em;
 }
 
-.navMenuItems > ul > a {
+.navMenuItems > ul > li {
+	list-style: none;
+}
+
+.navMenuItems > ul > li > a {
 	text-decoration: none;
 	color: rgb(31, 31, 31);
 	font-weight: 600;
 	font-family: 'Libre Baskerville', serif;
 }
 
-.navMenuItems > ul > a > p {
+.navMenuItems > ul > li > a > p {
 	padding: 0.5em 1em;
 }
 
-.navMenuItems > ul > a > p:hover {
+.navMenuItems > ul > li > a > p:hover {
 	background: rgb(239, 227, 252);
 	border-radius: 10px;
 }

@@ -16,8 +16,8 @@ function Nav({ theme }) {
 
 		const options = {
 			root: null,
-			rootMargin: '10px 0px 0px 0px',
-			threshold: 1.0,
+			rootMargin: '20px 0px 0px 0px',
+			threshold: 0.5,
 		};
 
 		const observer = new IntersectionObserver(function (entries) {
@@ -39,71 +39,83 @@ function Nav({ theme }) {
 			onClick={() => setToggleMenu((prevToggle) => !prevToggle)}>
 			<div className={theme ? 'navLinkBox' : 'navLinkBox navLinkBlack'}>
 				<ul>
-					<NavLink
-						to="/#intro"
-						className={navLoc === 'intro' ? 'navActive' : null}>
-						<p
-							className={
-								theme
-									? null
-									: navLoc === 'intro'
-									? 'navDarkActive'
-									: 'navDarkText'
-							}>
-							Intro
-						</p>
-					</NavLink>
+					<li>
+						<NavLink
+							to="/#intro"
+							className={navLoc === 'intro' ? 'navActive' : null}>
+							<p
+								className={
+									theme
+										? null
+										: navLoc === 'intro'
+										? 'navDarkActive'
+										: 'navDarkText'
+								}>
+								Intro
+							</p>
+						</NavLink>
+					</li>
 				</ul>
 
 				<ul>
-					<NavLink
-						to="/#about"
-						className={navLoc === 'about' ? 'navActive' : null}>
-						<p
-							className={
-								theme
-									? null
-									: navLoc === 'about'
-									? 'navDarkActive'
-									: 'navDarkText'
-							}>
-							About
-						</p>
-					</NavLink>
+					<li>
+						<NavLink
+							to="/#about"
+							className={navLoc === 'about' ? 'navActive' : null}>
+							<p
+								className={
+									theme
+										? null
+										: navLoc === 'about'
+										? 'navDarkActive'
+										: 'navDarkText'
+								}>
+								About
+							</p>
+						</NavLink>
+					</li>
 				</ul>
 
 				<ul>
-					<NavLink
-						to="/#projects"
-						className={navLoc === 'projects' ? 'navActive' : null}>
-						<p
+					<li>
+						<NavLink
+							to="/#projects"
 							className={
-								theme
-									? null
-									: navLoc === 'projects'
-									? 'navDarkActive'
-									: 'navDarkText'
+								navLoc === 'projects' ? 'navActive' : null
 							}>
-							Projects
-						</p>
-					</NavLink>
+							<p
+								className={
+									theme
+										? null
+										: navLoc === 'projects'
+										? 'navDarkActive'
+										: 'navDarkText'
+								}>
+								Projects
+							</p>
+						</NavLink>
+					</li>
 				</ul>
 
 				<ul>
-					<NavLink
-						to="/#contact"
-						className={navLoc === 'contact' ? 'navActive' : null}>
-						<p
+					<li>
+						<NavLink
+							to="/#contact"
 							className={
-								theme
-									? null
-									: navLoc === 'contact'
-									? 'navDarkActive'
-									: 'navDarkText'
+								navLoc === 'contact' ? 'navActive' : null
 							}>
-							Contact
-						</p>
-					</NavLink>
+							<p
+								className={
+									theme
+										? null
+										: navLoc === 'contact'
+										? 'navDarkActive'
+										: 'navDarkText'
+								}>
+								Contact
+							</p>
+						</NavLink>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -150,76 +162,88 @@ function Nav({ theme }) {
 				<div className="navPageRight">
 					<nav className="navMenuItems">
 						<ul>
-							<NavLink
-								to="/#intro"
-								className={
-									navLoc === 'intro' ? 'navActive' : null
-								}>
-								<p
+							<li>
+								<NavLink
+									to="/#intro"
 									className={
-										theme
-											? null
-											: navLoc === 'intro'
-											? 'navDarkActive'
-											: 'navDarkText'
+										navLoc === 'intro' ? 'navActive' : null
 									}>
-									Intro
-								</p>
-							</NavLink>
+									<p
+										className={
+											theme
+												? null
+												: navLoc === 'intro'
+												? 'navDarkActive'
+												: 'navDarkText'
+										}>
+										Intro
+									</p>
+								</NavLink>
+							</li>
 						</ul>
 						<ul>
-							<NavLink
-								to="/#about"
-								className={
-									navLoc === 'about' ? 'navActive' : null
-								}>
-								<p
+							<li>
+								<NavLink
+									to="/#about"
 									className={
-										theme
-											? null
-											: navLoc === 'about'
-											? 'navDarkActive'
-											: 'navDarkText'
+										navLoc === 'about' ? 'navActive' : null
 									}>
-									About
-								</p>
-							</NavLink>
+									<p
+										className={
+											theme
+												? null
+												: navLoc === 'about'
+												? 'navDarkActive'
+												: 'navDarkText'
+										}>
+										About
+									</p>
+								</NavLink>
+							</li>
 						</ul>
 						<ul>
-							<NavLink
-								to="/#projects"
-								className={
-									navLoc === 'projects' ? 'navActive' : null
-								}>
-								<p
+							<li>
+								<NavLink
+									to="/#projects"
 									className={
-										theme
-											? null
-											: navLoc === 'projects'
-											? 'navDarkActive'
-											: 'navDarkText'
+										navLoc === 'projects'
+											? 'navActive'
+											: null
 									}>
-									Projects
-								</p>
-							</NavLink>
+									<p
+										className={
+											theme
+												? null
+												: navLoc === 'projects'
+												? 'navDarkActive'
+												: 'navDarkText'
+										}>
+										Projects
+									</p>
+								</NavLink>
+							</li>
 						</ul>
 						<ul>
-							<NavLink
-								to="/#contact"
-								className={
-									navLoc === 'contact' ? 'navActive' : null
-								}>
-								<p
+							<li>
+								<NavLink
+									to="/#contact"
 									className={
-										theme
-											? null
-											: navLoc === 'contact'
-											? 'navDarkActive'
-											: 'navDarkText'
+										navLoc === 'contact'
+											? 'navActive'
+											: null
 									}>
-									Contact
-								</p>
-							</NavLink>
+									<p
+										className={
+											theme
+												? null
+												: navLoc === 'contact'
+												? 'navDarkActive'
+												: 'navDarkText'
+										}>
+										Contact
+									</p>
+								</NavLink>
+							</li>
 						</ul>
 					</nav>
 					<Button
