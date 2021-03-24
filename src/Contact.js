@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import emoji from './images/man_raising_hand.gif';
+import axios from 'axios';
 import './Contact.css';
+import { toast } from 'react-toastify';
+import CloseRoundedIcon from '@material-ui/icons/CloseRounded';
 
 function Contact({ theme }) {
 	const [name, setName] = useState('');
@@ -11,6 +14,8 @@ function Contact({ theme }) {
 	const [isEmailActive, setIsEmailActive] = useState(false);
 	const [isSubjectActive, setIsSubjectActive] = useState(false);
 	const [isMessageActive, setIsMessageActive] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
+	const [isSent, setIsSent] = useState(false);
 
 	const handleName = (text) => {
 		setName(text);
@@ -52,10 +57,85 @@ function Contact({ theme }) {
 		}
 	};
 
+	const instance = axios.create({
+		baseURL: 'https://secure-plateau-52891.herokuapp.com/',
+	});
+
+	const data = {
+		name,
+		email,
+		message,
+		subject,
+	};
+
+	const resetData = () => {
+		setName('');
+		setEmail('');
+		setSubject('');
+		setMessage('');
+	};
+
 	const handleForm = (e) => {
 		e.preventDefault();
-		alert('Form has been submitted');
+		setIsLoading(true);
+
+		if (!name || !email || !subject || !message) {
+			toast.warn('🙏 Please add all the details!', {
+				position: 'bottom-right',
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+			});
+			setIsLoading(false);
+			return;
+		}
+
+		instance.post('/send', data).then((response) => {
+			setIsLoading(false);
+			setIsSent(true);
+			if (response.data.status === 'success') {
+				toast.info('🥰 Your message has been delivered!', {
+					position: 'bottom-right',
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+				});
+				resetData();
+			} else if (response.data.status === 'fail') {
+				setIsLoading(false);
+				toast.error('😭 Sorry, your message could not be delivered!', {
+					position: 'bottom-right',
+					autoClose: 5000,
+					hideProgressBar: false,
+					closeOnClick: true,
+					pauseOnHover: true,
+					draggable: true,
+					progress: undefined,
+				});
+			}
+		});
 	};
+
+	const loadingModal = (
+		<div className="loadingModal">
+			<div class="loader">Loading...</div>
+		</div>
+	);
+
+	const confirmMessageSent = (
+		<div className="messageSent">
+			<p>I have received your message. Thankyou 🥰</p>
+			<button onClick={() => setIsSent(false)}>
+				<CloseRoundedIcon />
+			</button>
+		</div>
+	);
 
 	return (
 		<section
@@ -63,6 +143,7 @@ function Contact({ theme }) {
 			className={
 				theme ? 'contactContainer' : 'contactContainer contactBlack'
 			}>
+			{isLoading ? loadingModal : null}
 			<div className="contactPage">
 				<div
 					className={
@@ -80,11 +161,11 @@ function Contact({ theme }) {
 				</p>
 				<div className="contactBody">
 					<div className="submitLeft">
+						{isSent && confirmMessageSent}
 						<div id="float-label">
 							<input
 								id="full-name"
 								type="text"
-								className={theme ? null : 'contactDarkInput'}
 								value={name}
 								onChange={(e) => handleName(e.target.value)}
 							/>
@@ -98,7 +179,6 @@ function Contact({ theme }) {
 							<input
 								type="email"
 								id="email"
-								className={theme ? null : 'contactDarkText'}
 								value={email}
 								onChange={(e) => handleEmail(e.target.value)}
 							/>
@@ -154,7 +234,7 @@ function Contact({ theme }) {
 										? 'contactInfoHeading'
 										: 'contactInfoHeading contactDarkText'
 								}>
-								MY DETAILS
+								MY CONTACT DETAILS
 							</h5>
 							<p
 								className={

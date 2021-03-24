@@ -8,6 +8,8 @@ import Footer from './Footer';
 import Intro from './Intro';
 import Nav from './Nav';
 import Projects from './Projects';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 	const location = useLocation();
@@ -46,6 +48,17 @@ function App() {
 
 	return (
 		<div className="App">
+			<ToastContainer
+				position="bottom-right"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+			/>
 			<Nav theme={darkTheme} />
 			<Darkmode theme={darkTheme} toggle={toggleTheme} />
 			<Footer theme={darkTheme} />
