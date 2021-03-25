@@ -82,7 +82,7 @@ function Contact({ theme }) {
 
 		if (!name || !email || !subject || !message) {
 			setIsError(true);
-			toast.warn('🙏 Please add all the details!', {
+			toast.warn('🙏 Please fill all the details!', {
 				position: 'bottom-right',
 				autoClose: 5000,
 				hideProgressBar: false,
@@ -91,7 +91,7 @@ function Contact({ theme }) {
 				draggable: true,
 				progress: undefined,
 			});
-			/* setIsLoading(false); */
+			setIsLoading(false);
 			return;
 		}
 
