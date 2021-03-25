@@ -91,7 +91,7 @@ function Contact({ theme }) {
 				draggable: true,
 				progress: undefined,
 			});
-			setIsLoading(false);
+			/* setIsLoading(false); */
 			return;
 		}
 
@@ -128,6 +128,7 @@ function Contact({ theme }) {
 	const loadingModal = (
 		<div className="loadingModal">
 			<div class="loader">Loading...</div>
+			<p>Please wait until I receive your message...</p>
 		</div>
 	);
 

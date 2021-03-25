@@ -5,6 +5,7 @@
 	justify-content: center;
 	align-items: center;
 	background: #ececec;
+	position: relative;
 }
 
 .contactPage {
@@ -349,14 +350,23 @@
 .loadingModal {
 	position: absolute;
 	z-index: 999;
-	min-height: 100vh;
+	min-height: 100%;
 	bottom: 0;
 	min-width: 100vw;
-	background: rgb(143, 143, 143, 0.6);
+	background: rgba(63, 63, 63, 0.8);
 	display: flex;
 	align-items: center;
+	flex-direction: column;
 	justify-content: center;
 	overflow: hidden;
+}
+
+.loadingModal > p {
+	color: white;
+	font-size: 1.5em;
+	font-weight: 500;
+	font-family: 'Libre Baskerville', serif;
+	max-width: 80%;
 }
 
 .loadingModal::-webkit-scrollbar {
