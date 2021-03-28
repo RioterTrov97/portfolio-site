@@ -123,9 +123,7 @@ function Nav({ theme }) {
 	return (
 		<div className={theme ? 'navContainer' : 'navContainer navBlack'}>
 			<div className="navPage">
-				<div
-					className="navRight"
-					onClick={() => history.push('/#intro')}>
+				<div className="navRight" onClick={() => history.push('/')}>
 					<object
 						type="image/svg+xml"
 						data={diamondSvg}
@@ -140,9 +138,7 @@ function Nav({ theme }) {
 					</object>
 				</div>
 
-				<div
-					className="navText"
-					onClick={() => history.push('/#intro')}>
+				<div className="navText" onClick={() => history.push('/')}>
 					<h5
 						className={
 							theme ? 'navTextTop' : 'navTextTop navDarkHeadText'
