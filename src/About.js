@@ -97,41 +97,50 @@ const About = ({ theme }) => {
 				<div className="aboutPageRight">
 					<div
 						className={
-							theme ? 'skillList' : 'skillList aboutDarkText'
+							theme ? 'skillList' : 'skillList aboutskillBlack'
 						}>
 						<Skill
+							theme={theme}
 							skillImg="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/768px-HTML5_logo_and_wordmark.svg.png"
 							skillLink="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"
 						/>
 						<Skill
+							theme={theme}
 							skillImg="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/CSS.3.svg/730px-CSS.3.svg.png"
 							skillLink="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics"
 						/>
 						<Skill
+							theme={theme}
 							skillImg="https://wildcardcorp.com/image-repository/javascript-icon.png/@@images/image.png"
 							skillLink="https://www.javascript.com/"
 						/>
 						<Skill
+							theme={theme}
 							skillImg={reactLogo}
 							skillLink="https://reactjs.org/"
 						/>
 						<Skill
+							theme={theme}
 							skillImg="https://cdn.zapier.com/storage/blog/4ec8fc7dc3a75758a3913bab9e5a4fd8_2.500x278.png"
 							skillLink="https://redux.js.org/"
 						/>
 						<Skill
+							theme={theme}
 							skillImg="https://miro.medium.com/max/512/1*9U1toerFxB8aiFRreLxEUQ.png"
 							skillLink="https://sass-lang.com/"
 						/>
 						<Skill
+							theme={theme}
 							skillImg="https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_960_720.png"
 							skillLink="https://nodejs.org/en/"
 						/>
 						<Skill
+							theme={theme}
 							skillImg="https://i.pinimg.com/originals/43/4d/cf/434dcfe1acd79af48ddfc35292c31de5.png"
 							skillLink="https://git-scm.com/"
 						/>
 						<Skill
+							theme={theme}
 							skillImg={photoshop}
 							skillLink="https://www.adobe.com/au/products/photoshop.html"
 						/>

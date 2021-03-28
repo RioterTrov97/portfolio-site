@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 	const location = useLocation();
-	const [darkTheme, setDarkTheme] = useState(false);
+	const [lightTheme, setLightTheme] = useState(false);
 	const [toggleDarkMode, setToggleDarkMode] = useState(false);
 
 	useEffect(() => {
@@ -28,21 +28,22 @@ function App() {
 	}, [location]);
 
 	useEffect(() => {
-		const dark = window.localStorage.getItem('darkMode');
+		const light = window.localStorage.getItem('lightMode');
 
-		if (dark) {
-			if (dark === 'true') {
-				setDarkTheme(true);
+		if (light) {
+			if (light === 'true') {
+				setLightTheme(true);
 			} else {
-				setDarkTheme(false);
+				setLightTheme(false);
 			}
 		} else {
-			window.localStorage.setItem('darkMode', false);
+			window.localStorage.setItem('lightMode', true);
+			setLightTheme(true);
 		}
 	}, [toggleDarkMode]);
 
 	const toggleTheme = () => {
-		window.localStorage.setItem('darkMode', !darkTheme);
+		window.localStorage.setItem('lightMode', !lightTheme);
 		setToggleDarkMode(!toggleDarkMode);
 	};
 
@@ -59,13 +60,13 @@ function App() {
 				draggable
 				pauseOnHover
 			/>
-			<Nav theme={darkTheme} />
-			<Darkmode theme={darkTheme} toggle={toggleTheme} />
-			<Footer theme={darkTheme} />
-			<Intro theme={darkTheme} />
-			<About theme={darkTheme} />
-			<Projects theme={darkTheme} />
-			<Contact theme={darkTheme} />
+			<Nav theme={lightTheme} />
+			<Darkmode theme={lightTheme} toggle={toggleTheme} />
+			<Footer theme={lightTheme} />
+			<Intro theme={lightTheme} />
+			<About theme={lightTheme} />
+			<Projects theme={lightTheme} />
+			<Contact theme={lightTheme} />
 		</div>
 	);
 }

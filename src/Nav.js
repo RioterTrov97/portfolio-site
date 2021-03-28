@@ -17,7 +17,7 @@ function Nav({ theme }) {
 		const options = {
 			root: null,
 			rootMargin: '20px 0px 0px 0px',
-			threshold: 0.5,
+			threshold: 0.3,
 		};
 
 		const observer = new IntersectionObserver(function (entries) {
@@ -145,7 +145,7 @@ function Nav({ theme }) {
 					onClick={() => history.push('/#intro')}>
 					<h5
 						className={
-							theme ? 'navTextTop' : 'navTextTop navDarkText'
+							theme ? 'navTextTop' : 'navTextTop navDarkHeadText'
 						}>
 						Suman Basnet
 					</h5>
@@ -153,7 +153,7 @@ function Nav({ theme }) {
 						className={
 							theme
 								? 'navTextBottom'
-								: 'navTextBottom navDarkText'
+								: 'navTextBottom navDarkHeadText'
 						}>
 						Frontend Developer
 					</p>

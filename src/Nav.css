@@ -163,9 +163,10 @@
 }
 
 .navBlack {
-	background: rgb(50, 50, 50);
+	background: rgb(30, 35, 36);
 }
 
+.navDarkHeadText,
 .navDarkText {
 	color: rgb(240, 240, 240);
 }

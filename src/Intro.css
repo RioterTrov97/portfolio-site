@@ -249,7 +249,7 @@
 }
 
 .introBlack {
-	background: rgb(50, 50, 50);
+	background: rgb(30, 35, 36);
 }
 
 .introDarkText > h5,
@@ -264,7 +264,7 @@
 
 .introDarkBefore::before {
 	z-index: 1;
-	background: rgb(50, 50, 50);
+	background: rgb(30, 35, 36);
 	color: rgb(157, 98, 253);
 }
 

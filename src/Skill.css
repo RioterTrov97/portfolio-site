@@ -21,3 +21,7 @@
 		width: 60px;
 	}
 }
+
+.skillBlack > img {
+	background: rgb(168, 168, 168);
+}

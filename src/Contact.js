@@ -84,7 +84,7 @@ function Contact({ theme }) {
 			setIsError(true);
 			toast.warn('🙏 Please fill all the details!', {
 				position: 'bottom-right',
-				autoClose: 5000,
+				autoClose: 2500,
 				hideProgressBar: false,
 				closeOnClick: true,
 				pauseOnHover: true,
@@ -102,7 +102,7 @@ function Contact({ theme }) {
 			if (response.data.status === 'success') {
 				toast.info('🥰 Your message has been delivered!', {
 					position: 'bottom-right',
-					autoClose: 5000,
+					autoClose: 2500,
 					hideProgressBar: false,
 					closeOnClick: true,
 					pauseOnHover: true,
@@ -114,7 +114,7 @@ function Contact({ theme }) {
 				setIsLoading(false);
 				toast.error('😭 Sorry, your message could not be delivered!', {
 					position: 'bottom-right',
-					autoClose: 5000,
+					autoClose: 2500,
 					hideProgressBar: false,
 					closeOnClick: true,
 					pauseOnHover: true,
@@ -127,8 +127,12 @@ function Contact({ theme }) {
 
 	const loadingModal = (
 		<div className="loadingModal">
-			<div class="loader">Loading...</div>
-			<p>Please wait until I receive your message...</p>
+			<div class="lds-ring">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
 		</div>
 	);
 
@@ -156,7 +160,6 @@ function Contact({ theme }) {
 			className={
 				theme ? 'contactContainer' : 'contactContainer contactBlack'
 			}>
-			{isLoading ? loadingModal : null}
 			<div className="contactPage">
 				<div
 					className={
@@ -181,6 +184,7 @@ function Contact({ theme }) {
 								id="full-name"
 								type="text"
 								value={name}
+								disabled={isLoading}
 								onChange={(e) => handleName(e.target.value)}
 							/>
 							<label
@@ -194,6 +198,7 @@ function Contact({ theme }) {
 								type="email"
 								id="email"
 								value={email}
+								disabled={isLoading}
 								onChange={(e) => handleEmail(e.target.value)}
 							/>
 							<label
@@ -207,6 +212,7 @@ function Contact({ theme }) {
 								type="text"
 								id="subject"
 								value={subject}
+								disabled={isLoading}
 								onChange={(e) => handleSubject(e.target.value)}
 							/>
 							<label
@@ -221,6 +227,7 @@ function Contact({ theme }) {
 								id="message"
 								className="contactMessage"
 								value={message}
+								disabled={isLoading}
 								onChange={(e) => handleMessage(e.target.value)}
 							/>
 							<label
@@ -231,9 +238,20 @@ function Contact({ theme }) {
 						</div>
 						<button
 							className="contactFormSubmit"
+							disabled={isLoading}
 							onClick={(e) => handleForm(e)}>
-							SUBMIT
+							{isLoading ? loadingModal : 'SUBMIT'}
 						</button>
+						{isLoading ? (
+							<p
+								className={
+									theme
+										? 'loadingModalText'
+										: 'loadingModalText loadingModalDarkText'
+								}>
+								Please wait until I receive your message...
+							</p>
+						) : null}
 					</div>
 					<div className="submitRight">
 						<div
