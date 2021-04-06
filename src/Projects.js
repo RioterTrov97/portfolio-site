@@ -2,8 +2,8 @@ import React from 'react';
 import './Projects.css';
 import Project from './Project';
 import netflix from './images/netflix.png';
-import todo from './images/todo.png';
-import deals from './images/deals.png';
+import openchat from './images/OpenChat.png';
+import bargainbuy from './images/BargainBuy.png';
 import portfolio from './images/portfolio.png';
 import { useHistory } from 'react-router';
 
@@ -52,17 +52,19 @@ function Projects({ theme }) {
 					/>
 					<Project
 						theme={theme}
-						projectName="Deals Web App"
-						projectDesc="Deals Web App is my personal project where users can share deals across the community. Developed with React, Redux and Firebase."
-						projectLive="https://mulyamitra-app.web.app/"
-						projectPic={deals}
+						projectName="OpenChat - MERN"
+						projectGitLink="https://github.com/RioterTrov97/chat-app-frontend"
+						projectDesc="OpenChat App is is a full stack MERN application where users can talk to any chatgroups in the site. Developed with React, Redux, MongoDB, Express, Node and Sass."
+						projectLive="https://open-chat-app-2021.web.app/"
+						projectPic={openchat}
 					/>
 					<Project
 						theme={theme}
-						projectName="Todo App - MERN"
-						projectDesc="This is a full stack MERN application created by me. Developed with MongoDB, Express, React, Redux, and Node."
-						projectLive="https://todo-app-96f51.web.app/"
-						projectPic={todo}
+						projectName="BargainBuy - MERN"
+						projectGitLink="https://github.com/RioterTrov97/bargainbuy-backend"
+						projectDesc="This is a full stack MERN application created by me alone. Developed with MongoDB, Express, React, Redux, and Node."
+						projectLive="https://bargainbuy.herokuapp.com/"
+						projectPic={bargainbuy}
 					/>
 					<Project
 						theme={theme}
