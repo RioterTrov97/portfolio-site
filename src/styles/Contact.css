@@ -1,0 +1,413 @@
+.contactContainer {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #ececec;
+}
+
+.contactPage {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	max-width: 1400px;
+	margin-top: 5.5em;
+	margin-bottom: 2em;
+}
+
+.contactHeaderTitle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contactHeaderTitle > img {
+	height: 90px;
+	margin-left: 1em;
+}
+
+.contactHeaderTitle > h5 {
+	font-family: 'Libre Baskerville', serif;
+	font-size: 2.3em;
+	color: rgb(26, 25, 25);
+}
+
+.contactPage > p {
+	margin-top: 3em;
+	margin-bottom: 3em;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 1.4em;
+	max-width: 80%;
+}
+
+.contactBody {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.submitRight {
+	margin: 0 3em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 500px;
+}
+
+.submitLeft {
+	padding: 0 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 2em;
+	width: 100%;
+	max-width: 500px;
+}
+
+.contactFormSubmit {
+	margin: 2em 0;
+	font-size: 1.25em;
+	font-weight: bold !important;
+	line-height: 1.8rem;
+	padding: 1rem 2.5rem;
+	width: 100%;
+	max-width: 400px;
+	border: none;
+	outline: none;
+	font-family: 'Libre Baskerville', serif;
+	background: linear-gradient(
+			to left,
+			rgb(139, 1, 252) 50%,
+			rgb(0, 95, 204) 50%
+		)
+		right;
+	background-size: 200%;
+	transition: 350ms ease-out;
+	color: white;
+	width: 100%;
+	font-weight: 500;
+	cursor: pointer;
+	border-radius: 1.5em;
+	position: relative;
+}
+
+.contactFormSubmit:hover {
+	background-position: left;
+}
+
+#float-label {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 400px;
+	position: relative;
+	padding-top: 20px;
+}
+
+#float-label input {
+	width: 100%;
+	max-width: 400px;
+	height: 56px;
+	padding: 14px 16px 0 10px;
+	outline: none;
+	border: none;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	border-radius: 10px;
+	background: #fff;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 16px;
+}
+
+.contactMessage {
+	min-height: 150px;
+}
+
+#float-label label {
+	font-size: 16px;
+	margin: 0 auto;
+	font-family: 'Libre Baskerville', serif;
+	padding: 0 12px;
+	color: #999;
+	pointer-events: none;
+	position: absolute;
+	transform: translate(0, 26px) scale(1);
+	transform-origin: top left;
+	transition: all 0.2s ease-out;
+}
+
+#float-label:focus-within label {
+	transform: translate(0, 12px) scale(0.75);
+}
+
+#float-label .Active {
+	transform: translate(0, 12px) scale(0.75);
+}
+
+/* CSS trick for text area */
+
+#float-label-textarea {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 400px;
+	position: relative;
+	padding-top: 20px;
+}
+
+#float-label-textarea textarea {
+	width: 100%;
+	max-width: 400px;
+	height: unset;
+	padding: 32px 16px 0 10px;
+	outline: none;
+	border: none;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	border-radius: 10px;
+	background: #fff;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 16px;
+}
+
+#float-label-textarea label {
+	font-size: 16px;
+	margin: 0 auto;
+	font-family: 'Libre Baskerville', serif;
+	padding: 0 12px;
+	color: #999;
+	pointer-events: none;
+	position: absolute;
+	transform: translate(0, 26px) scale(1);
+	transform-origin: top left;
+	transition: all 0.2s ease-out;
+}
+
+#float-label-textarea:focus-within label {
+	transform: translate(0, 12px) scale(0.75);
+}
+
+#float-label-textarea .Active {
+	transform: translate(0, 12px) scale(0.75);
+}
+
+.submitRightCard {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	max-width: 400px;
+	margin-top: 3.5em;
+	padding: 2em;
+	background: white;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	border-radius: 10px;
+}
+
+.contactInfoHeading {
+	font-size: 1.4em;
+	color: rgb(75, 75, 75);
+	font-family: 'Libre Baskerville', serif;
+	margin-bottom: 2em;
+}
+
+.contactInfoTitle {
+	font-size: 1.2em;
+	font-weight: 500;
+	color: rgb(61, 61, 61);
+	font-family: 'Libre Baskerville', serif;
+}
+
+.contactInfoInfo {
+	margin: 1.2em 0 2.4em 0;
+	font-size: 1em;
+	color: rgb(85, 85, 85);
+	font-family: 'Libre Baskerville', serif;
+}
+
+@media only screen and (max-width: 1030px) {
+	.contactHeaderTitle > h5 {
+		font-size: 1.5em;
+	}
+
+	.contactHeaderTitle > img {
+		height: 60px;
+		margin-left: 1em;
+	}
+
+	.contactPage {
+		margin-top: 5.5em;
+	}
+
+	.contactPage > p {
+		font-size: 1.1em;
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+
+	.contactBody {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#float-label input {
+		width: 100%;
+		max-width: 400px;
+	}
+
+	#float-label-textarea textarea {
+		width: 100%;
+		max-width: 400px;
+	}
+
+	.submitRight {
+		width: 100%;
+		max-width: 400px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.submitRightCard {
+		width: 100%;
+		margin-top: 0;
+	}
+
+	.submitLeft {
+		width: 90%;
+		max-width: 400px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.submitRight {
+		width: 95%;
+		max-width: 250px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.submitLeft {
+		width: 90%;
+		max-width: 250px;
+	}
+
+	#float-label input {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	#float-label-textarea textarea {
+		width: 100%;
+		max-width: 300px;
+	}
+}
+
+.contactBlack {
+	background: rgb(37, 42, 43);
+}
+
+.contactDarkText,
+.contactDarkText > h5 {
+	color: rgb(240, 240, 240);
+}
+
+.contactDarkbackground {
+	background: black;
+	color: rgb(255, 0, 0);
+}
+
+.contactDarkCard {
+	background: rgb(104, 104, 104);
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+}
+
+.loadingModalDarkText {
+	color: white !important;
+}
+
+.messageSent {
+	background: rgb(13, 196, 83);
+	border-radius: 0.5em;
+	display: flex;
+}
+
+.errorMessage {
+	background: rgb(216, 0, 0);
+}
+
+.messageSent > p {
+	padding: 0.5em 1em;
+	color: white;
+}
+
+.messageSent > button {
+	margin-right: 0.2em;
+	border: none;
+	background: none;
+	outline: none;
+	cursor: pointer;
+	color: white;
+}
+
+.loadingModal {
+	width: 100%;
+	height: 100%;
+}
+
+.loadingModalText {
+	color: black;
+	font-size: 1em;
+	font-weight: 500;
+	margin-top: -2em;
+	font-family: 'Libre Baskerville', serif;
+	max-width: 80%;
+}
+
+.loadingModal::-webkit-scrollbar {
+	display: none;
+}
+
+.lds-ring {
+	display: inline-block;
+	position: relative;
+	width: 40px;
+	max-height: 3.25rem;
+}
+.lds-ring div {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	margin: -26px 4px;
+	border: 4px solid #fff;
+	border-radius: 50%;
+	animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+	animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+	animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+	animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}

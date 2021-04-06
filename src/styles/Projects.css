@@ -1,0 +1,100 @@
+.projectsContainer {
+	min-height: 100vh;
+	background-color: #f2f3f5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.projectsInside {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	max-width: 1500px;
+}
+
+.projectsHeading {
+	padding: 6em 2em 0.5em 2em;
+}
+
+.projectsHeading > h2 {
+	color: rgb(44, 44, 44);
+	font-size: 2.3em;
+	font-family: 'Libre Baskerville', serif;
+}
+
+.projectsHeadingDesc {
+	display: flex;
+	justify-content: center;
+	margin-top: 3rem;
+}
+
+.projectsHeadingDesc > p {
+	font-size: 1.2em;
+	padding-top: 0.3rem;
+	line-height: 1.8rem;
+	font-family: 'Libre Baskerville', serif;
+	color: rgb(49, 49, 49);
+}
+
+.contactButton {
+	font-size: 1.25em;
+	font-weight: bold !important;
+	line-height: 1.8rem;
+	max-width: 10em;
+	padding: 0.2rem 0.4rem;
+	font-family: 'Libre Baskerville', serif;
+	background: none;
+	color: rgba(139, 1, 252, 0.842);
+	font-weight: 500;
+	cursor: pointer;
+	border-radius: 1.5em;
+	border: 2px solid rgb(139, 1, 252, 0);
+	transition: background 0.2s;
+}
+
+.contactButton:hover {
+	background: rgb(235, 222, 247);
+}
+
+.projectsPage {
+	height: 100%;
+	margin-bottom: 2em;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1000px) {
+	.projectsHeading > h2 {
+		font-size: 1.7em;
+	}
+
+	.projectsHeading > p {
+		font-size: 1em;
+		padding: 0 1em 0 0.2em;
+	}
+
+	.projectsHeadingDesc {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contactButton {
+		margin-top: 0;
+	}
+}
+
+.projectsBlack {
+	background: rgb(30, 35, 36);
+}
+
+.projectsDarkText > p,
+.projectsDarkText > h2 {
+	color: rgb(240, 240, 240);
+}
+
+.projectsDarkText > h3 {
+	color: rgb(196, 95, 255);
+}

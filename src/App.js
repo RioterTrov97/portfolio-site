@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import About from './About';
-import './App.css';
-import Contact from './Contact';
-import Darkmode from './Darkmode';
-import Footer from './Footer';
-import Intro from './Intro';
-import Nav from './Nav';
-import Projects from './Projects';
+import About from './screens/About';
+import './styles/App.css';
+import Contact from './screens/Contact';
+import Darkmode from './components/Darkmode';
+import Footer from './components/Footer';
+import Intro from './screens/Intro';
+import Nav from './components/Nav';
+import Projects from './screens/Projects';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

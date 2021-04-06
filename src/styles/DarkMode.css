@@ -1,0 +1,59 @@
+.DarkModeToggle {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 20;
+	top: 0;
+	margin-top: 200px;
+	right: 0;
+}
+
+.DarkToggleHeading {
+	font-size: 1em;
+	font-weight: 500;
+	color: rgb(218, 218, 218);
+	margin-bottom: 5px;
+	padding-right: 5px;
+}
+
+.DarkToggle {
+	cursor: pointer;
+	height: 2.5em;
+	width: 2.5em;
+	border-radius: 50%;
+	background: rgb(20, 20, 20);
+	outline: none;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scale(1);
+	transition: transform 300ms;
+}
+
+.DarkToggle:hover,
+.sunnyMode:hover {
+	transform: scale(1.2);
+}
+
+.sunnyMode {
+	background: rgb(48, 125, 212, 0.8);
+	transform: scale(1);
+	transition: transform 300ms;
+}
+
+.sunnyHead {
+	color: rgb(48, 125, 212);
+}
+
+.DarkToggle > img {
+	object-fit: contain;
+	height: 1.5em;
+}
+
+@media only screen and (max-width: 500px) {
+	.DarkModeToggle {
+		margin-top: 150px;
+	}
+}

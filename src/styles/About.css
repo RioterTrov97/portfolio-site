@@ -1,0 +1,227 @@
+.aboutContainer {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ececec;
+}
+
+.aboutPage {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+	max-width: 1400px;
+}
+
+.aboutPageLeft {
+	min-width: 45%;
+	max-width: 45%;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.aboutHeading {
+	font-size: 2em;
+	line-height: 2em;
+	font-family: 'Libre Baskerville', serif;
+	font-weight: bolder !important;
+	color: rgb(113, 43, 226);
+	text-align: center;
+	margin-bottom: 0.5em;
+	display: flex;
+}
+
+.aboutHeading > img {
+	height: 60px;
+	padding-left: 10px;
+}
+.aboutDesc {
+	font-size: 1.4em;
+	line-height: 1.8em;
+	font-family: 'Libre Baskerville', serif;
+	text-align: justify;
+	padding: 0.5rem 0;
+	color: rgb(92, 92, 92);
+	max-width: 500px;
+}
+
+.aboutDesc > span {
+	color: rgb(24, 24, 24);
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.aboutDesc > span:hover {
+	border-bottom: 2px solid rgb(32, 32, 32);
+}
+
+.aboutSocial {
+	margin-top: 3rem;
+	text-align: left;
+	display: flex;
+}
+
+.aboutSocial > p {
+	font-size: 1.4em;
+	padding: 0em 0.5em 0.5em 0;
+	color: gray;
+	font-family: 'Libre Baskerville', serif;
+}
+
+.socialLinks > svg {
+	height: 1.7em;
+	width: 1.7em;
+	padding: 0 2em 0 0;
+	cursor: pointer;
+	fill: rgb(82, 82, 82) !important;
+}
+
+.socialLinks > svg:hover {
+	fill: rgb(140, 0, 255) !important;
+}
+
+.aboutResume {
+	text-align: left;
+	cursor: pointer;
+	font-size: 1.1em;
+	font-weight: 500;
+	max-width: 10em;
+	padding: 1em 2em;
+	margin-top: 2em;
+	border-radius: 3em;
+	background: linear-gradient(to left, transparent 50%, rgb(183, 52, 216) 50%)
+		right;
+	background-size: 200%;
+	transition: 350ms ease-out;
+	color: rgb(183, 52, 216);
+	border: 1px solid rgb(183, 52, 216);
+	transition: 350ms ease-out;
+}
+
+.aboutResume:hover {
+	background-position: left;
+	color: white;
+}
+
+.aboutPageRight {
+	max-width: 480px;
+}
+
+.aboutPageRight > p {
+	font-size: 2em;
+	position: relative;
+	line-height: 2em;
+	font-family: 'Libre Baskerville', serif;
+	color: rgb(48, 48, 48);
+}
+
+.skillList {
+	display: flex;
+	flex-wrap: wrap;
+	min-width: 50%;
+	position: relative;
+	margin-top: 5rem;
+}
+
+.skillList::before {
+	content: 'My Skills:';
+	color: rgb(109, 109, 109);
+	font-size: 1.4rem;
+	font-weight: 500;
+	padding: 0 0.5em;
+	margin-left: 0.5em;
+	z-index: 2;
+	position: absolute;
+	top: -20px;
+}
+
+.aboutskillBlack::before {
+	color: rgb(179, 179, 179);
+}
+
+@media only screen and (max-width: 1100px) {
+	.aboutPage {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin-top: 5.5em;
+	}
+
+	.aboutPageRight {
+		max-width: 800px;
+	}
+
+	.aboutPageLeft {
+		min-width: 90%;
+		max-width: 90%;
+	}
+
+	.aboutHeading {
+		font-size: 1.4em;
+		width: 100%;
+	}
+
+	.aboutDesc {
+		font-size: 1.15em;
+		max-width: 80%;
+	}
+
+	.aboutSocial > p {
+		font-size: 1.1em;
+	}
+
+	.socialLinks > svg {
+		height: 1.4em;
+		width: 1.4em;
+		padding: 0 1em 0 0;
+	}
+
+	.skillList {
+		min-width: 100%;
+	}
+}
+
+@media only screen and (min-width: 1350px) {
+	.aboutPageRight {
+		max-width: 600px;
+	}
+}
+
+.aboutBlack {
+	background: rgb(37, 42, 43);
+}
+
+.aboutDarkText,
+.aboutDarkText > p {
+	color: rgb(240, 240, 240);
+}
+
+.aboutDarkText > span {
+	color: white;
+}
+
+.aboutDarkText > span:hover {
+	border-bottom: 2px solid white;
+}
+
+.aboutDarkText::before {
+	color: rgb(204, 204, 204);
+}
+
+.socialDarkSVG > svg {
+	fill: rgb(240, 240, 240) !important;
+}
+
+.aboutDarkHeading {
+	color: rgb(196, 95, 255);
+}
+
+.aboutDarkTextBorder {
+	border: 3px solid rgba(255, 255, 255, 0.8);
+	color: rgb(255, 255, 255);
+}
