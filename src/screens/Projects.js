@@ -54,7 +54,7 @@ function Projects({ theme }) {
 						theme={theme}
 						projectName="OpenChat - MERN"
 						projectGitLink="https://github.com/RioterTrov97/chat-app-frontend"
-						projectDesc="OpenChat App is is a full stack MERN application where users can talk to any chatgroups in the site. Developed with React, Redux, MongoDB, Express, Node and Sass."
+						projectDesc="OpenChat App is a full stack MERN application where users can talk to any chatgroups in the site. Developed with React, Redux, MongoDB, Express, Node and Sass."
 						projectLive="https://open-chat-app-2021.web.app/"
 						projectPic={openchat}
 					/>
