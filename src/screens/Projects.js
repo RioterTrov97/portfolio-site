@@ -46,7 +46,7 @@ function Projects({ theme }) {
 						theme={theme}
 						projectName="OpenChat - MERN"
 						projectGitLink="https://github.com/RioterTrov97/chat-app-frontend"
-						projectDesc="OpenChat App is a full stack MERN application where users can talk to any users or chatgroups in the site. Developed with React, Redux, MongoDB, Express, Node and Sass."
+						projectDesc="OpenChat App is a full stack MERN chatroom web application. Developed with React, Redux, MongoDB, Express, Node and Sass."
 						projectLive="https://open-chat-app-2021.web.app/"
 						projectPic={openchat}
 					/>
@@ -61,7 +61,7 @@ function Projects({ theme }) {
 					<Project
 						theme={theme}
 						projectName="Netflix Trailer"
-						projectDesc="Netflix Trailer is a web app that I created where people can watch trailer of almost any movies in the market. Developed with React, Redux, TMDB api, and Firebase."
+						projectDesc="Netflix Trailer is a web app that I created where people can watch movie trailers. Developed with React, Redux, TMDB api, and Firebase."
 						projectGitLink="https://github.com/RioterTrov97/netflix-clone"
 						projectLive="https://netflix-clone-ebf41.web.app/"
 						projectPic={netflix}

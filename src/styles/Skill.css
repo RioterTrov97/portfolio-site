@@ -14,6 +14,15 @@
 	cursor: pointer;
 }
 
+@media only screen and (max-width: 600px) {
+	.skillInfo > img {
+		height: 40px;
+		width: 40px;
+		margin: 1em 0.5em;
+		padding: 0.8em 0.8em;
+	}
+}
+
 @media only screen and (max-width: 1100px) {
 	.skillInfo > img {
 		object-fit: contain;

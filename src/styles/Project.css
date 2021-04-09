@@ -37,7 +37,7 @@
 
 .projectDesc {
 	max-width: 80%;
-	text-align: center;
+	text-align: left;
 	padding-top: 2rem;
 	font-size: 1em;
 	line-height: 2em;
@@ -74,17 +74,24 @@
 
 	.projectTitle {
 		font-size: 0.7rem;
+		margin-top: -40px;
 	}
 
 	.projectDesc {
 		font-size: 0.6rem;
-		line-height: 1.5em;
-		max-height: 6em;
+		line-height: 1.4rem;
+		max-height: 5.6rem;
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
 		overflow: hidden;
+		text-overflow: ellipsis;
+		margin-top: -20px;
+		margin-bottom: 10px;
 	}
 
 	.projectButton {
-		margin: 0.6em 0.2em;
+		margin: 0.1rem 0.1rem 0.8rem 0;
 		font-size: 0.7rem;
 		padding: 0.6em 1.2em;
 	}
