@@ -44,14 +44,6 @@ function Projects({ theme }) {
 				<div className="projectsPage">
 					<Project
 						theme={theme}
-						projectName="Netflix Trailer"
-						projectDesc="Netflix Trailer is a web app that I created where people can watch trailer of almost any movies in the market. Developed with React, Redux, TMDB api, and Firebase."
-						projectGitLink="https://github.com/RioterTrov97/netflix-clone"
-						projectLive="https://netflix-clone-ebf41.web.app/"
-						projectPic={netflix}
-					/>
-					<Project
-						theme={theme}
 						projectName="OpenChat - MERN"
 						projectGitLink="https://github.com/RioterTrov97/chat-app-frontend"
 						projectDesc="OpenChat App is a full stack MERN application where users can talk to any users or chatgroups in the site. Developed with React, Redux, MongoDB, Express, Node and Sass."
@@ -65,6 +57,14 @@ function Projects({ theme }) {
 						projectDesc="This is a full stack ecommerce MERN application with paypal integration. Developed with MongoDB, Express, React, Redux, and Node."
 						projectLive="https://bargainbuy.herokuapp.com/"
 						projectPic={bargainbuy}
+					/>
+					<Project
+						theme={theme}
+						projectName="Netflix Trailer"
+						projectDesc="Netflix Trailer is a web app that I created where people can watch trailer of almost any movies in the market. Developed with React, Redux, TMDB api, and Firebase."
+						projectGitLink="https://github.com/RioterTrov97/netflix-clone"
+						projectLive="https://netflix-clone-ebf41.web.app/"
+						projectPic={netflix}
 					/>
 					<Project
 						theme={theme}
