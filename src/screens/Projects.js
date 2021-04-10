@@ -70,7 +70,7 @@ function Projects({ theme }) {
 						theme={theme}
 						projectName="Portfolio - MERN"
 						projectGitLink="https://github.com/RioterTrov97/portfolio-site-2021"
-						projectDesc="The portfolio app is my personal project that displays my cabailities as a web dev. Developed with love using React, Node and Express."
+						projectDesc="The portfolio app is my personal project that displays my capabilities as a web dev. Developed with love using React, Node and Express."
 						projectLive="https://portfolio-site-2021.web.app/"
 						projectPic={portfolio}
 					/>
