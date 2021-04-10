@@ -32,8 +32,8 @@ const About = ({ theme }) => {
 						}>
 						Hi! I am Suman Basnet. I love combining the art of
 						design with the art of programming. I currently
-						specialise in React due to its nature of being fast,
-						scalable, and simple.
+						specialise in MERN stack due to its nature of being
+						fast, scalable, and simple.
 					</p>
 					<p
 						className={
