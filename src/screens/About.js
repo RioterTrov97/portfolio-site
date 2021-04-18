@@ -23,7 +23,7 @@ const About = ({ theme }) => {
 								? 'aboutHeading'
 								: 'aboutHeading aboutDarkHeading'
 						}>
-						<p>JavaScript Developer </p>
+						<p>I 💖 JavaScript</p>
 						<img src={emoji} alt="" />
 					</div>
 					<p

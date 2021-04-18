@@ -125,6 +125,7 @@
 	min-width: 50%;
 	position: relative;
 	margin-top: 5rem;
+	margin-bottom: 5rem;
 }
 
 .skillList::before {
@@ -153,7 +154,8 @@
 	}
 
 	.aboutPageRight {
-		max-width: 800px;
+		min-width: 90%;
+		max-width: 90%;
 	}
 
 	.aboutPageLeft {
@@ -164,6 +166,10 @@
 	.aboutHeading {
 		font-size: 1.4em;
 		width: 100%;
+	}
+
+	.aboutHeading > img {
+		height: 46px;
 	}
 
 	.aboutDesc {
@@ -182,7 +188,7 @@
 	}
 
 	.skillList {
-		min-width: 100%;
+		max-width: 100%;
 	}
 }
 
