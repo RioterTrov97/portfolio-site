@@ -23,7 +23,7 @@ const About = ({ theme }) => {
 								? 'aboutHeading'
 								: 'aboutHeading aboutDarkHeading'
 						}>
-						<p>Frontend Developer </p>
+						<p>JavaScript Developer </p>
 						<img src={emoji} alt="" />
 					</div>
 					<p
@@ -32,8 +32,8 @@ const About = ({ theme }) => {
 						}>
 						Hi! I am Suman Basnet. I love combining the art of
 						design with the art of programming. I currently
-						specialise in MERN stack due to its nature of being
-						fast, scalable, and simple.
+						specialise in ReactJS and NodeJS due to its nature of
+						being fast, scalable, and simple.
 					</p>
 					<p
 						className={
