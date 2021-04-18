@@ -88,7 +88,7 @@ const About = ({ theme }) => {
 						}
 						onClick={() => {
 							window.open(
-								'https://drive.google.com/file/d/1Hqojv_j0pHi_PHhXMtzdMcJOaLe-Vd9R/view?usp=sharing'
+								'https://drive.google.com/file/d/1SyVLBBXuflnLQ8y5T_qqC_B3MSLfc3bC/view?usp=sharing'
 							);
 						}}>
 						View My Resume
