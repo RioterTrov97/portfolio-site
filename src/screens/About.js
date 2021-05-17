@@ -90,7 +90,7 @@ const About = ({ theme }) => {
 						}
 						onClick={() => {
 							window.open(
-								'https://drive.google.com/file/d/1SyVLBBXuflnLQ8y5T_qqC_B3MSLfc3bC/view?usp=sharing'
+								'https://drive.google.com/file/d/1xFNZS5tKMzfZD7uXa51Awci_xfj_vUxe/view?usp=sharing'
 							);
 						}}>
 						View My Resume
