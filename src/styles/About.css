@@ -154,16 +154,21 @@
 	}
 
 	.aboutPageRight {
-		min-width: 90%;
-		max-width: 90%;
+		min-width: 100%;
+		max-width: 100%;
 	}
 
 	.aboutPageLeft {
-		min-width: 90%;
-		max-width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		min-width: 100%;
+		max-width: 100%;
+		padding: 0;
 	}
 
 	.aboutHeading {
+		justify-content: center;
 		font-size: 1.3em;
 		width: 100%;
 	}
@@ -174,7 +179,10 @@
 
 	.aboutDesc {
 		font-size: 1.05em;
-		max-width: 80%;
+		max-width: 85%;
+	}
+	.aboutResume {
+		margin-bottom: 50px;
 	}
 
 	.aboutSocial > p {
@@ -188,7 +196,13 @@
 	}
 
 	.skillList {
+		display: flex;
+		justify-content: center;
 		max-width: 100%;
+	}
+
+	.skillList::before {
+		top: -40px;
 	}
 }
 

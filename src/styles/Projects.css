@@ -74,10 +74,11 @@
 
 	.projectsHeadingDesc > p {
 		font-size: 1.05rem;
-		padding: 0 1em 0 0.2em;
+		padding: 0;
 	}
 
 	.projectsHeadingDesc {
+		margin-top: 1.5rem;
 		flex-direction: column;
 		align-items: center;
 	}
