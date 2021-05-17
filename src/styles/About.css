@@ -164,7 +164,7 @@
 	}
 
 	.aboutHeading {
-		font-size: 1.4em;
+		font-size: 1.3em;
 		width: 100%;
 	}
 
@@ -173,12 +173,12 @@
 	}
 
 	.aboutDesc {
-		font-size: 1.15em;
+		font-size: 1.05em;
 		max-width: 80%;
 	}
 
 	.aboutSocial > p {
-		font-size: 1.1em;
+		font-size: 1.05em;
 	}
 
 	.socialLinks > svg {

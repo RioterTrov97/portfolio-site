@@ -3,8 +3,10 @@ import { ReactComponent as GitHub } from '../images/github.svg';
 import { ReactComponent as Linkedin } from '../images/linkedin.svg';
 import { ReactComponent as Instagram } from '../images/instagram.svg';
 import emoji from '../images/robot.gif';
-import photoshop from '../images/photoshop-logo.png';
-import reactLogo from '../images/React-Logo.png';
+import ReactImg from '../images/React.png';
+import ReactNativeImg from '../images/ReactNative.png';
+import TypeScriptImg from '../images/TypeScript.png';
+import NextImg from '../images/Next.png';
 import '../styles/About.css';
 import Skill from '../components/Skill';
 import { useHistory } from 'react-router';
@@ -116,13 +118,8 @@ const About = ({ theme }) => {
 						/>
 						<Skill
 							theme={theme}
-							skillImg={reactLogo}
-							skillLink="https://reactjs.org/"
-						/>
-						<Skill
-							theme={theme}
-							skillImg="https://cdn.zapier.com/storage/blog/4ec8fc7dc3a75758a3913bab9e5a4fd8_2.500x278.png"
-							skillLink="https://redux.js.org/"
+							skillImg={TypeScriptImg}
+							skillLink="https://www.typescriptlang.org/"
 						/>
 						<Skill
 							theme={theme}
@@ -131,18 +128,23 @@ const About = ({ theme }) => {
 						/>
 						<Skill
 							theme={theme}
-							skillImg="https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_960_720.png"
+							skillImg="https://developers.redhat.com/blog/wp-content/uploads/2018/03/nodejs-new-pantone-black.png"
 							skillLink="https://nodejs.org/en/"
 						/>
 						<Skill
 							theme={theme}
-							skillImg="https://i.pinimg.com/originals/43/4d/cf/434dcfe1acd79af48ddfc35292c31de5.png"
-							skillLink="https://git-scm.com/"
+							skillImg={ReactImg}
+							skillLink="https://reactjs.org/"
 						/>
 						<Skill
 							theme={theme}
-							skillImg={photoshop}
-							skillLink="https://www.adobe.com/au/products/photoshop.html"
+							skillImg={ReactNativeImg}
+							skillLink="https://reactnative.dev/"
+						/>
+						<Skill
+							theme={theme}
+							skillImg={NextImg}
+							skillLink="https://nextjs.org/"
 						/>
 					</div>
 				</div>

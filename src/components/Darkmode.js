@@ -5,12 +5,12 @@ import sunny from '../images/sunny.svg';
 function Darkmode({ theme, toggle }) {
 	return (
 		<div className="DarkModeToggle">
-			<p
+			{/* <p
 				className={
 					theme ? 'DarkToggleHeading sunnyHead' : 'DarkToggleHeading'
 				}>
 				Theme
-			</p>
+			</p> */}
 			<div
 				className={theme ? 'DarkToggle sunnyMode' : 'DarkToggle'}
 				onClick={() => toggle()}>

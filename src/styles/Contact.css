@@ -91,7 +91,6 @@
 	background-size: 200%;
 	transition: 350ms ease-out;
 	color: white;
-	width: 100%;
 	font-weight: 500;
 	cursor: pointer;
 	border-radius: 1.5em;
@@ -112,10 +111,11 @@
 }
 
 #float-label input {
+	align-self: center;
 	width: 100%;
-	max-width: 400px;
+	max-width: 380px;
 	height: 56px;
-	padding: 14px 16px 0 10px;
+	padding: 10px 20px;
 	outline: none;
 	border: none;
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -162,10 +162,12 @@
 }
 
 #float-label-textarea textarea {
+	align-self: center;
 	width: 100%;
-	max-width: 400px;
+	max-width: 380px;
+	padding: 12px 20px;
+	padding-top: 30px;
 	height: unset;
-	padding: 32px 16px 0 10px;
 	outline: none;
 	border: none;
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -231,12 +233,18 @@
 }
 
 @media only screen and (max-width: 1030px) {
+	.contactBody {
+		flex-direction: column;
+		align-items: center;
+		flex-wrap: nowrap;
+		width: 100vw;
+	}
 	.contactHeaderTitle > h5 {
-		font-size: 1.5em;
+		font-size: 1.3em;
 	}
 
 	.contactHeaderTitle > img {
-		height: 60px;
+		height: 50px;
 		margin-left: 1em;
 	}
 
@@ -245,69 +253,60 @@
 	}
 
 	.contactPage > p {
-		font-size: 1.1em;
-		margin-top: 2em;
-		margin-bottom: 2em;
+		font-size: 1.05rem;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
 	}
 
-	.contactBody {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	#float-label input {
-		width: 100%;
-		max-width: 400px;
-	}
-
+	#float-label,
+	#float-label input,
+	#float-label-textarea,
 	#float-label-textarea textarea {
-		width: 100%;
-		max-width: 400px;
+		width: 90%;
+		max-width: 500px;
+	}
+
+	#float-label label,
+	#float-label-textarea label {
+		padding: 0 0 0 25px;
 	}
 
 	.submitRight {
-		width: 100%;
-		max-width: 400px;
+		width: 90%;
+		max-width: 500px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin: 0;
 	}
 
 	.submitRightCard {
-		width: 100%;
-		margin-top: 0;
+		width: 90%;
+		padding: 30px 10px 10px 10px;
+		margin: 0;
 	}
 
 	.submitLeft {
-		width: 90%;
-		max-width: 400px;
-	}
-}
-
-@media only screen and (max-width: 500px) {
-	.submitRight {
-		width: 95%;
-		max-width: 250px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.submitLeft {
-		width: 90%;
-		max-width: 250px;
-	}
-
-	#float-label input {
 		width: 100%;
-		max-width: 300px;
+		max-width: 100%;
+		padding: 0;
+		margin: 0;
 	}
 
-	#float-label-textarea textarea {
-		width: 100%;
-		max-width: 300px;
+	.contactInfoHeading {
+		font-size: 1.1rem;
+	}
+
+	.contactInfoTitle {
+		font-size: 1rem;
+	}
+
+	.contactInfoInfo {
+		font-size: 0.9rem;
+	}
+
+	.contactFormSubmit {
+		width: 90%;
 	}
 }
 

@@ -35,7 +35,7 @@
 	padding-top: 0.3rem;
 	line-height: 1.8rem;
 	font-family: 'Libre Baskerville', serif;
-	color: rgb(49, 49, 49);
+	color: rgb(73, 73, 73);
 }
 
 .contactButton {
@@ -52,6 +52,7 @@
 	border-radius: 1.5em;
 	border: 2px solid rgb(139, 1, 252, 0);
 	transition: background 0.2s;
+	margin-bottom: 20px;
 }
 
 .contactButton:hover {
@@ -68,11 +69,11 @@
 
 @media only screen and (max-width: 1000px) {
 	.projectsHeading > h2 {
-		font-size: 1.7em;
+		font-size: 1.3rem;
 	}
 
-	.projectsHeading > p {
-		font-size: 1em;
+	.projectsHeadingDesc > p {
+		font-size: 1.05rem;
 		padding: 0 1em 0 0.2em;
 	}
 
@@ -82,6 +83,7 @@
 	}
 
 	.contactButton {
+		font-size: 1.15rem;
 		margin-top: 0;
 	}
 }
