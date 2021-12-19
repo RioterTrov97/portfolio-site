@@ -6,7 +6,8 @@
 	width: 100%;
 	top: 0;
 	position: fixed;
-	background-color: rgba(243, 243, 243, 0.95);
+	background-color: rgb(243, 243, 243);
+	transition: background-color var(--dark-mode-toggle-time);
 }
 
 .navPage {

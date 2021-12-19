@@ -28,18 +28,12 @@ function Project({
 				</span>
 			</h4>
 			<div
-				className={
-					theme ? 'projectDesc' : 'projectDesc projectDarkTextBlack'
-				}>
+				className={theme ? 'projectDesc' : 'projectDesc projectDarkTextBlack'}>
 				{projectDesc}
 			</div>
 
 			<button
-				className={
-					theme
-						? 'projectButton'
-						: 'projectButton projectDarkBackground'
-				}
+				className={`projectButton ${theme ? 'projectDarkBackground' : ''}`}
 				onClick={(e) => {
 					e.preventDefault();
 					window.open(projectLive);

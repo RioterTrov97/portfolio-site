@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import About from './screens/About';
 import './styles/App.css';
@@ -13,8 +13,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 	const location = useLocation();
-	const [lightTheme, setLightTheme] = useState(false);
+	const [lightTheme, setLightTheme] = useState(true);
 	const [toggleDarkMode, setToggleDarkMode] = useState(false);
+	const [isIntersectingContact, setIsIntersectingContact] = useState(false);
 
 	useEffect(() => {
 		if (location.hash) {
@@ -47,6 +48,11 @@ function App() {
 		setToggleDarkMode(!toggleDarkMode);
 	};
 
+	const handleContactIntersection = useCallback(
+		(val) => setIsIntersectingContact(val),
+		[]
+	);
+
 	return (
 		<div className="App">
 			<ToastContainer
@@ -60,9 +66,15 @@ function App() {
 				draggable
 				pauseOnHover
 			/>
-			<Nav theme={lightTheme} />
+			<Nav
+				theme={lightTheme}
+				setIsIntersectingContact={handleContactIntersection}
+			/>
 			<Darkmode theme={lightTheme} toggle={toggleTheme} />
-			<Footer theme={lightTheme} />
+			<Footer
+				theme={lightTheme}
+				isIntersectingContact={isIntersectingContact}
+			/>
 			<Intro theme={lightTheme} />
 			<About theme={lightTheme} />
 			<Projects theme={lightTheme} />

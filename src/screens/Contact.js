@@ -157,23 +157,18 @@ function Contact({ theme }) {
 	return (
 		<section
 			id="contact"
-			className={
-				theme ? 'contactContainer' : 'contactContainer contactBlack'
-			}>
+			className={theme ? 'contactContainer' : 'contactContainer contactBlack'}>
 			<div className="contactPage">
 				<div
 					className={
-						theme
-							? 'contactHeaderTitle'
-							: 'contactHeaderTitle contactDarkText'
+						theme ? 'contactHeaderTitle' : 'contactHeaderTitle contactDarkText'
 					}>
 					<h5>Please say Hello!</h5>
 					<img src={emoji} alt="" />
 				</div>
 
 				<p className={theme ? null : 'contactDarkText'}>
-					Submit the form below so I can get back to you as soon as
-					possible!
+					Submit the form below so I can get back to you as soon as possible!
 				</p>
 				<div className="contactBody">
 					<div className="submitLeft">
@@ -201,9 +196,7 @@ function Contact({ theme }) {
 								disabled={isLoading}
 								onChange={(e) => handleEmail(e.target.value)}
 							/>
-							<label
-								htmlFor="email"
-								className={isEmailActive ? 'Active' : ''}>
+							<label htmlFor="email" className={isEmailActive ? 'Active' : ''}>
 								E-mail
 							</label>
 						</div>
@@ -256,9 +249,7 @@ function Contact({ theme }) {
 					<div className="submitRight">
 						<div
 							className={
-								theme
-									? 'submitRightCard'
-									: 'submitRightCard contactDarkCard'
+								theme ? 'submitRightCard' : 'submitRightCard contactDarkCard'
 							}>
 							<h5
 								className={
@@ -278,9 +269,7 @@ function Contact({ theme }) {
 							</p>
 							<p
 								className={
-									theme
-										? 'contactInfoInfo'
-										: 'contactInfoInfo contactDarkText'
+									theme ? 'contactInfoInfo' : 'contactInfoInfo contactDarkText'
 								}>
 								Mobile: 0420530881
 							</p>
@@ -295,9 +284,7 @@ function Contact({ theme }) {
 							</p>
 							<p
 								className={
-									theme
-										? 'contactInfoInfo'
-										: 'contactInfoInfo contactDarkText'
+									theme ? 'contactInfoInfo' : 'contactInfoInfo contactDarkText'
 								}>
 								basnet.trovtle@gmail.com
 							</p>
@@ -312,9 +299,7 @@ function Contact({ theme }) {
 							</p>
 							<p
 								className={
-									theme
-										? 'contactInfoInfo'
-										: 'contactInfoInfo contactDarkText'
+									theme ? 'contactInfoInfo' : 'contactInfoInfo contactDarkText'
 								}>
 								Sydney, NSW, Australia
 							</p>

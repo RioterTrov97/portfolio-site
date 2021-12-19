@@ -5,6 +5,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: rgb(243, 243, 243);
+	transition: background-color var(--dark-mode-toggle-time);
 }
 
 .introPage {
@@ -28,13 +30,8 @@
 	padding: 1em;
 }
 
-.introHeading {
-	display: flex;
-}
-
-.emoji {
-	height: 60px;
-	margin-left: 10px;
+.introHeading > span {
+	font-size: 1.5em !important;
 }
 
 .introIntro {
@@ -52,6 +49,7 @@
 .introIntro::before {
 	content: 'Hello there!';
 	background-color: rgb(243, 243, 243);
+	transition: background-color var(--dark-mode-toggle-time);
 	color: rgb(111, 0, 255);
 	font-size: 1.2rem;
 	padding: 0 0.5em;
@@ -156,15 +154,6 @@
 		top: -20px;
 		min-height: 3px;
 		width: 40px;
-	}
-
-	.introHeading {
-		font-size: 1em;
-	}
-
-	.emoji {
-		height: 30px;
-		margin-left: 10px;
 	}
 
 	.introSocial {

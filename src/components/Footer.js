@@ -1,18 +1,26 @@
 import React from 'react';
 import '../styles/Footer.css';
 import MailOutlineRoundedIcon from '@material-ui/icons/MailOutlineRounded';
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import { useHistory } from 'react-router';
 
-function Footer({ theme }) {
+function Footer({ theme, isIntersectingContact }) {
 	const history = useHistory();
 	return (
 		<div className="footerContainer">
 			<div className="footer">
-				<div className="footerLeft">
+				<div
+					className={`footerLeft ${
+						isIntersectingContact ? 'blockFooterAnimation' : ''
+					}`}>
 					<div
 						className="footerLeftIcon"
 						onClick={() => history.push('/#contact')}>
-						<MailOutlineRoundedIcon className="mailIcon" />
+						{!isIntersectingContact ? (
+							<MailOutlineRoundedIcon className="mailIcon" />
+						) : (
+							<ArrowRightAltIcon className="mailIcon" />
+						)}
 					</div>
 					<div
 						className="footerLeftText"
@@ -20,10 +28,7 @@ function Footer({ theme }) {
 						<p>Contact me</p>
 					</div>
 				</div>
-				<div
-					className={
-						theme ? 'footerRight' : 'footerRight footerBlackText'
-					}>
+				<div className={theme ? 'footerRight' : 'footerRight footerBlackText'}>
 					<p>SumanDesign2021®</p>
 				</div>
 			</div>

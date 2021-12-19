@@ -37,6 +37,12 @@
 	width: 8em;
 }
 
+.blockFooterAnimation:hover {
+	cursor: initial;
+	width: 1.4em;
+	background: rgb(114, 114, 114);
+}
+
 .mailIcon {
 	fill: rgb(243, 243, 243) !important;
 	pointer-events: none;

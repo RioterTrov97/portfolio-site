@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/Intro.css';
 import codingGuy from '../images/coding-guy.png';
-import emoji from '../images/waving_hand.gif';
 import { useHistory } from 'react-router';
 
 function Intro({ theme }) {
@@ -15,28 +14,18 @@ function Intro({ theme }) {
 				<div className="introTop">
 					<div className="introTopLeft">
 						<div
-							className={
-								theme
-									? 'introIntro'
-									: 'introIntro introDarkBefore'
-							}>
-							<div className="introHeading">
-								<p className={theme ? null : ' introDarkText'}>
-									I am Suman Basnet
-								</p>
-								<img className="emoji" src={emoji} alt="" />
-							</div>
+							className={theme ? 'introIntro' : 'introIntro introDarkBefore'}>
+							<p className={`introHeading ${theme ? null : 'introDarkText'}`}>
+								I am Suman Basnet <span>👨‍💻</span>
+							</p>
+
 							<p className={theme ? null : ' introDarkText'}>
-								I am a passionate Web Developer.
+								A curious Software Engineer
 							</p>
 						</div>
 
 						<div
-							className={
-								theme
-									? 'introButtons'
-									: 'introButtons introDarkText'
-							}>
+							className={theme ? 'introButtons' : 'introButtons introDarkText'}>
 							<div
 								className={
 									theme

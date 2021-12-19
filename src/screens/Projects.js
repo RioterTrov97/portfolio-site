@@ -4,7 +4,7 @@ import Project from '../components/Project';
 import netflix from '../images/netflix.png';
 import openchat from '../images/OpenChat.png';
 import bargainbuy from '../images/BargainBuy.png';
-import portfolio from '../images/portfolio.png';
+import algo from '../images/AlgoVisualizer.png';
 import { useHistory } from 'react-router';
 
 function Projects({ theme }) {
@@ -18,9 +18,7 @@ function Projects({ theme }) {
 			<div className="projectsInside">
 				<div
 					className={
-						theme
-							? 'projectsHeading'
-							: 'projectsHeading projectsDarkText'
+						theme ? 'projectsHeading' : 'projectsHeading projectsDarkText'
 					}>
 					<h2>My recent works</h2>
 					<div
@@ -30,8 +28,8 @@ function Projects({ theme }) {
 								: 'projectsHeadingDesc projectsDarkText'
 						}>
 						<p>
-							Here are a few design projects I've worked on
-							recently. Want to see more?
+							Here are a few design projects I've worked on recently. Want to
+							see more?
 						</p>
 						<h3
 							className="contactButton"
@@ -42,6 +40,14 @@ function Projects({ theme }) {
 				</div>
 
 				<div className="projectsPage">
+					<Project
+						theme={theme}
+						projectName="Algorithm Visualizer"
+						projectGitLink="https://github.com/RioterTrov97/algo-visualizer-react"
+						projectDesc="The AlgoVisualizer is my personal project that displays how path finding and maze generation alogrithm works. Developed using ReactJS."
+						projectLive="https://algo.sumanbasnet.com"
+						projectPic={algo}
+					/>
 					<Project
 						theme={theme}
 						projectName="OpenChat - MERN"
@@ -60,19 +66,11 @@ function Projects({ theme }) {
 					/>
 					<Project
 						theme={theme}
-						projectName="Netflix Trailer"
-						projectDesc="Netflix Trailer is a web app that I created where people can watch movie trailers. Developed with React, Redux, TMDB api, and Firebase."
+						projectName="Trailerzz"
+						projectDesc="Trailerzz is a web app that I created where people can watch movie trailers. Developed with React, Redux, TMDB api, and Firebase."
 						projectGitLink="https://github.com/RioterTrov97/netflix-clone"
-						projectLive="https://netflix-clone-ebf41.web.app/"
+						projectLive="https://trailerzz.web.app/"
 						projectPic={netflix}
-					/>
-					<Project
-						theme={theme}
-						projectName="Portfolio"
-						projectGitLink="https://github.com/RioterTrov97/portfolio-site-2021"
-						projectDesc="The portfolio app is my personal project that displays my capabilities as a web dev. Developed with love using React, Node and Express."
-						projectLive="https://suman-basnet.web.app/"
-						projectPic={portfolio}
 					/>
 				</div>
 			</div>

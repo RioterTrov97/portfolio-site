@@ -1,9 +1,9 @@
 .skillInfo > img {
 	object-fit: contain;
-	height: 90px;
-	width: 90px;
+	height: 110px;
+	width: 110px;
 	margin: 2em 1em;
-	padding: 1rem 1rem;
+	padding: 0.5rem;
 	border-radius: 20px;
 	box-shadow: rgba(46, 49, 51, 0.2) 0px 8px 24px;
 	background: rgb(245, 244, 244);
@@ -12,7 +12,9 @@
 }
 
 .skillInfo > img:hover {
-	transform: scale(1.1);
+	transform: scale(1.8);
+	position: relative;
+	z-index: 999;
 	cursor: pointer;
 }
 
@@ -22,6 +24,11 @@
 		width: 40px;
 		margin: 1.2rem 0.7rem;
 		padding: 0.8em 0.8em;
+	}
+
+	.skillInfo > img:hover {
+		transform: scale(1);
+		cursor: pointer;
 	}
 }
 
@@ -34,5 +41,5 @@
 }
 
 .skillBlack > img {
-	background: rgb(168, 168, 168);
+	background: rgb(219, 219, 219);
 }

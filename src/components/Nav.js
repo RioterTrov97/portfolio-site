@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 import diamondSvg from '../images/diamond-dark-grey.svg';
 import diamondDSvg from '../images/diamond-white.svg';
 
-function Nav({ theme }) {
+function Nav({ theme, setIsIntersectingContact }) {
 	const [toggleMenu, setToggleMenu] = useState(false);
 	const [navLoc, setNavLoc] = useState('');
 	const history = useHistory();
@@ -24,6 +24,9 @@ function Nav({ theme }) {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					setNavLoc(entry.target.id);
+					setIsIntersectingContact(
+						entry.target.id === 'contact' ? true : false
+					);
 				}
 			});
 		}, options);
@@ -31,7 +34,7 @@ function Nav({ theme }) {
 		sections.forEach((section) => {
 			observer.observe(section);
 		});
-	}, []);
+	}, [setIsIntersectingContact]);
 
 	const hamMenu = (
 		<div
@@ -80,9 +83,7 @@ function Nav({ theme }) {
 					<li>
 						<NavLink
 							to="/#projects"
-							className={
-								navLoc === 'projects' ? 'navActive' : null
-							}>
+							className={navLoc === 'projects' ? 'navActive' : null}>
 							<p
 								className={
 									theme
@@ -101,9 +102,7 @@ function Nav({ theme }) {
 					<li>
 						<NavLink
 							to="/#contact"
-							className={
-								navLoc === 'contact' ? 'navActive' : null
-							}>
+							className={navLoc === 'contact' ? 'navActive' : null}>
 							<p
 								className={
 									theme
@@ -139,19 +138,14 @@ function Nav({ theme }) {
 				</div>
 
 				<div className="navText" onClick={() => history.push('/')}>
-					<h5
-						className={
-							theme ? 'navTextTop' : 'navTextTop navDarkHeadText'
-						}>
+					<h5 className={theme ? 'navTextTop' : 'navTextTop navDarkHeadText'}>
 						Suman Basnet
 					</h5>
 					<p
 						className={
-							theme
-								? 'navTextBottom'
-								: 'navTextBottom navDarkHeadText'
+							theme ? 'navTextBottom' : 'navTextBottom navDarkHeadText'
 						}>
-						Frontend Developer
+						Software Engineer
 					</p>
 				</div>
 				{toggleMenu && hamMenu}
@@ -161,9 +155,7 @@ function Nav({ theme }) {
 							<li>
 								<NavLink
 									to="/#intro"
-									className={
-										navLoc === 'intro' ? 'navActive' : null
-									}>
+									className={navLoc === 'intro' ? 'navActive' : null}>
 									<p
 										className={
 											theme
@@ -181,9 +173,7 @@ function Nav({ theme }) {
 							<li>
 								<NavLink
 									to="/#about"
-									className={
-										navLoc === 'about' ? 'navActive' : null
-									}>
+									className={navLoc === 'about' ? 'navActive' : null}>
 									<p
 										className={
 											theme
@@ -201,11 +191,7 @@ function Nav({ theme }) {
 							<li>
 								<NavLink
 									to="/#projects"
-									className={
-										navLoc === 'projects'
-											? 'navActive'
-											: null
-									}>
+									className={navLoc === 'projects' ? 'navActive' : null}>
 									<p
 										className={
 											theme
@@ -223,11 +209,7 @@ function Nav({ theme }) {
 							<li>
 								<NavLink
 									to="/#contact"
-									className={
-										navLoc === 'contact'
-											? 'navActive'
-											: null
-									}>
+									className={navLoc === 'contact' ? 'navActive' : null}>
 									<p
 										className={
 											theme
@@ -243,14 +225,10 @@ function Nav({ theme }) {
 						</ul>
 					</nav>
 					<Button
-						onClick={() =>
-							setToggleMenu((prevToggle) => !prevToggle)
-						}
+						onClick={() => setToggleMenu((prevToggle) => !prevToggle)}
 						className="navButton">
 						<MenuRoundedIcon
-							className={
-								theme ? 'hamIcon' : 'hamIcon darkHamIcon'
-							}
+							className={theme ? 'hamIcon' : 'hamIcon darkHamIcon'}
 							aria-label="ham-icon"
 						/>
 					</Button>
